@@ -1,0 +1,66 @@
+/* Section */
+
+section .container{
+    padding: 2rem 20rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+section .back {
+    font-size: 20px;
+    font-weight: 200;
+    color: black;
+    text-decoration: underline;
+}
+section .title {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+section .avatar {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+section .avatar img{
+    max-width: 100%;
+    width: 70px;
+}
+
+section .avatar .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section .avatar .info .name,
+section .avatar .info .describe {
+    font-size: 18px;
+}
+
+section .avatar .info .name {
+    color: #02b3e4;
+}
+
+section .container .main-content img{
+    border-radius: 10px;
+    width: 50%;
+}
+
+section .container .main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+section .container .text {
+    color: black;
+    font-size: 20px;
+    margin: 0 0 2rem 0;
+}
+
+/* Section */
