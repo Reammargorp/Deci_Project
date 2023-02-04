@@ -1,10 +1,12 @@
+@import url('../partials/primary.css');
+
 /* Section */
 
 section .container{
     padding: 2rem 20rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 section .back {
@@ -16,6 +18,12 @@ section .back {
 section .title {
     font-size: 30px;
     font-weight: bolder;
+}
+
+section .short-title {
+    font-size: 20px;
+    font-weight: bolder;
+    color: gray;
 }
 
 section .avatar {
@@ -31,6 +39,7 @@ section .avatar img{
 
 section .avatar .info {
     display: flex;
+    gap: 0.5rem;
     flex-direction: column;
     justify-content: center;
 }
@@ -38,6 +47,10 @@ section .avatar .info {
 section .avatar .info .name,
 section .avatar .info .describe {
     font-size: 18px;
+}
+
+section .avatar .info .link {
+    font-size: 16px;
 }
 
 section .avatar .info .name {
