@@ -54,39 +54,47 @@
 
     <!-- Start Calc -->
     <div class="calc none" id="calc">
-        <div class="title" id="title">Theme Changer</div>
-        <form id="calc" >
-            <div>
-                <input type="text" id="display">
-                <input type="button" name="operator" id="clear" value="c">
-            </div>
-            
-            <div>
-                <input type="button" name="one" id="num" value="1">
-                <input type="button" name="two" id="num" value="2">
-                <input type="button" name="three" id="num" value="3">
-                <input type="button" name="operator" id="bigger" value=">">
-            </div>
-            <div>
-                <input type="button" name="four" id="num" value="4">
-                <input type="button" name="five" id="num" value="5">
-                <input type="button" name="six" id="num" value="6">
-                <input type="button" name="operator" id="smaller" value="<">
-            </div>
-            <div>
-                <input type="button" name="seven" id="num" value="7">
-                <input type="button" name="eight" id="num" value="8">
-                <input type="button" name="nine" id="num" value="9">
-                <input type="button" name="operator" id="plus" value="+">
-            </div>
-            <div>
-                <input type="button" name="zero" id="num" value="0">
-                <input type="button" name="dot" id="num" value=".">
-                <input type="button" name="operator" id="equal" value="=">
-                <input type="button" name="operator" id="minus" value="-">
-            </div>
-
-        </form>
+        <div class="column">
+            <div class="title" id="title">Calculater</div>
+            <form id="calc" >
+                <div>
+                    <input type="text" id="display">
+                    <input type="text" id="answer" style="border: 1px solid black;">
+                </div>
+                <div>
+                    <input type="button" name="one" id="num" value="1">
+                    <input type="button" name="two" id="num" value="2">
+                    <input type="button" name="three" id="num" value="3">
+                    <input type="button" name="operator" id="bigger" value=">">
+                </div>
+                <div>
+                    <input type="button" name="four" id="num" value="4">
+                    <input type="button" name="five" id="num" value="5">
+                    <input type="button" name="six" id="num" value="6">
+                    <input type="button" name="operator" id="smaller" value="<">
+                </div>
+                <div>
+                    <input type="button" name="seven" id="num" value="7">
+                    <input type="button" name="eight" id="num" value="8">
+                    <input type="button" name="nine" id="num" value="9">
+                    <input type="button" name="operator" id="plus" value="+">
+                </div>
+                <div>
+                    <input type="button" name="zero" id="num" value="0">
+                    <input type="button" name="dot" id="num" value=".">
+                    <input type="button" name="operator" id="minus" value="-">
+                    <input type="button" name="operator" id="clear" value="c">
+                </div>
+                <div>
+                    <input type="button" name="operator" id="true" value="true">
+                    <input type="button" name="operator" id="false" value="false">
+                </div>
+                <div>
+                    <input type="button" name="operator" id="equal" value="Evelute">
+                </div>
+            </form>
+            <div class="check" id="check">Answer Checker</div>
+        </div>
     </div>
     <!-- End Calc -->
     <script src="js/main.js"></script>

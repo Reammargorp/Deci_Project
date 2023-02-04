@@ -163,46 +163,6 @@ padding: 0.3rem 2rem
     color: white;
 }
 /* End Info */
-/* Start Theme Changer */
-.theme-changer {
-    display: flex;
-    flex-direction: column;
-    margin: 5rem 0;
-    gap: 2rem;
-    padding: 0 3rem;
-}
-.theme-changer.none {
-    display: none;
-}
-.theme-changer .title {
-    color: white;
-    font-size: 25px;
-    font-weight: bolder;
-    text-align: center;
-}
-
-.theme-changer .table tr {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.theme-changer .table tr td{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.theme-changer table td {
-    font-size: 20px;
-    color: white;
-    font-weight: 500;
-}
-.theme-changer table tr input {
-    cursor:pointer;
-}
-/* End Theme Changer */
 /* Start Calc */
 .calc {
     display: flex;
@@ -220,11 +180,28 @@ padding: 0.3rem 2rem
     text-align: center;
 }
 
+.calc .column {
+    margin-top: 3rem;
+    padding: 2rem 5rem;
+    background-color: rgba(255, 255, 255, 0.597);
+    width: fit-content;
+    border-radius: 8px;
+}
+
 .calc form {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     margin-top: 2.5rem;
+    opacity: 1 !important;
+}
+
+.calc .column .check {
+    text-align: center;
+    margin-top: 3rem;
+    color: black;
+    font-weight: 500;
+    font-size: 30px;
 }
 
 .calc form div {

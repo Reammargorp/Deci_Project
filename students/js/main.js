@@ -74,33 +74,25 @@ let display = document.getElementById('display');
 let operators = document.getElementsByName('operator');
 // Get Nums Btns
 let nums = document.querySelectorAll('#num');
+// Get Answer Field
+let answer = document.getElementById('answer')
+// Check title
+let check = document.getElementById('check')
 
 function addToDisplay(e) {
     display.value += e.value;
 }
-
-for(let i =0; i< nums.length;i++) {
-    nums[i].onclick = () => {
-        addToDisplay(nums[i])
-    }
+function addToAsnwer(e) {
+    answer.value += e.value;
 }
 
 operators.forEach(btn => {
     btn.addEventListener('click', () => {
-        if(btn.id === "equal") {
-            if(display.value != '') {
-                display.value = eval(display.value);
-                times.value++
-                counter.innerHTML = `Problem Solved : ${times.value}`;
-            }else {
-                display.value = 'Please Insert Numbers'
-                setTimeout(() => {
-                    display.value = ''
-                }, 1000);
-            }
-        }else if(btn.id === "clear"){
+        console.log(btn.id);
+            if(btn.id === "clear"){
             if(display.value != '') {
                 display.value = "";
+                answer.value = ''
             }else {
                 display.value = 'There Is Nothing To Clear'
                 setTimeout(() => {
@@ -115,9 +107,55 @@ operators.forEach(btn => {
             addToDisplay(btn)
         }else if(btn.id === "smaller"){
             addToDisplay(btn)
+        }else if(btn.id === "equal") {
+        if(display.value != '') {
+            display.value = eval(display.value);
+            if(display.value == answer.value) {
+                check.innerHTML = "You Answer Were Correct, One More Point For You"
+                times.value++
+                counter.innerHTML = `Problem Solved : ${times.value}`;
+            }else {
+                check.innerHTML = "You Answer Were Wrong Sorry"
+            }
+        }else {
+            display.value = 'Please Insert Numbers'
+            setTimeout(() => {
+                display.value = ''
+            }, 1000);
+        }
+        }else if(btn.id === "true") {
+            let regex = /\d[+,-,>,<]\d/
+            let displayValue = display.value;
+            if(displayValue == '' || !regex.test(displayValue)) {
+                return false;
+            }else {
+                addToAsnwer(btn)
+            }
+        }else if(btn.id === "false") {
+            let regex = /\d[+,-,>,<]\d/
+            let displayValue = display.value;
+            if(displayValue == '' || !regex.test(displayValue)) {
+                return false;
+            }else {
+                addToAsnwer(btn)
+            }
         }
     })
 });
+
+
+for(let i =0; i< nums.length;i++) {
+    nums[i].onclick = () => {
+        let regex = /\d[+,-,>,<]\d/
+        let displayValue = display.value;
+        if(displayValue == '' || !regex.test(displayValue)) {
+            addToDisplay(nums[i])
+        }else {
+            addToAsnwer(num[i])
+        }
+    }
+}
+
 
 
 setInterval(() => {
