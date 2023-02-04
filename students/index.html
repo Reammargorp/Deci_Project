@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kids</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <!-- Start Login -->
+    <div class="login" id="login">
+        <form action="" method="POST">
+            <div class="alert none">You Need To Enter Data</div>
+            <div class="container">
+                <label for="full-name">Full Name</label>
+                <input type="text" name="full-name" id="full-name"  placeholder="Enter Your Name!">
+            </div>
+
+            <div class="container">
+                <label for="age">Age</label>
+                <input type="number" name="age" id="age" placeholder="Enter Your Age!">
+            </div>
+
+            <div class="container">
+                <label for="theme">Select Your Favourite Theme</label>
+                <select name="theme" id="theme">
+                    <option value="space">Space</option>
+                    <option value="dinosaurs">Dinosaurs</option>
+                    <option value="cars">Cars</option>
+                </select>
+            </div>
+
+            <input type="submit" class="primary-btn" name="submit" id="submit" value="submit">
+        </form>
+    </div>
+    <!-- End Login -->
+    <!-- Start Header -->
+    <div class="info-bar none" id="info-bar">
+        <div class="title" id="welcome-msg">students</div>
+        <input type="hidden" name="times" id="times">
+        <div class="title" id="counter">Problem Solved: 0</div>
+    </div>
+    <!-- End Header -->
+    <!-- Start info -->
+    <div class="info none" id="info">
+        <div class="title" id="title">
+            Student Info
+        </div>
+        <div class="container">
+        <div class="kid-info" id="current_name">Student Name: <strong>Cars</strong></div>
+        <div class="kid-info" id="current_age">Student Age: <strong>16</strong></div>
+        <div class="kid-info" id="current_theme">Student Fav Theme: <strong>Daiansour</strong></div>
+        </div>
+    </div>
+    <!-- End info -->
+
+    <!-- Start Calc -->
+    <div class="calc none" id="calc">
+        <div class="title" id="title">Theme Changer</div>
+        <form id="calc" >
+            <div>
+                <input type="text" id="display">
+                <input type="button" name="operator" id="clear" value="c">
+            </div>
+            
+            <div>
+                <input type="button" name="one" id="num" value="1">
+                <input type="button" name="two" id="num" value="2">
+                <input type="button" name="three" id="num" value="3">
+                <input type="button" name="operator" id="bigger" value=">">
+            </div>
+            <div>
+                <input type="button" name="four" id="num" value="4">
+                <input type="button" name="five" id="num" value="5">
+                <input type="button" name="six" id="num" value="6">
+                <input type="button" name="operator" id="smaller" value="<">
+            </div>
+            <div>
+                <input type="button" name="seven" id="num" value="7">
+                <input type="button" name="eight" id="num" value="8">
+                <input type="button" name="nine" id="num" value="9">
+                <input type="button" name="operator" id="plus" value="+">
+            </div>
+            <div>
+                <input type="button" name="zero" id="num" value="0">
+                <input type="button" name="dot" id="num" value=".">
+                <input type="button" name="operator" id="equal" value="=">
+                <input type="button" name="operator" id="minus" value="-">
+            </div>
+
+        </form>
+    </div>
+    <!-- End Calc -->
+    <script src="js/main.js"></script>
+</body>
+</html>
