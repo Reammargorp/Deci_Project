@@ -139,14 +139,13 @@ submit.onclick = (e) => {
     info_bar.classList.remove('none')
     info.classList.remove('none')
     calc.classList.remove('none')
-    let usernameRegex = /yassien/; // (1234) 567-8910
+    let usernameRegex = /\w/;
     let usernameValidation = usernameRegex.test(username.value);
-    let ageRegex = /123/; // (1234) 567-8910
+    let ageRegex = /\d/;
     let ageValidation = ageRegex.test(age.value);
     if (usernameValidation === false || ageValidation === false) {
         alert('You Need To Enter Data')
         location.reload()
     }
     setInfo();
-
 }
