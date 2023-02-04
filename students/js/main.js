@@ -114,8 +114,10 @@ operators.forEach(btn => {
                 check.innerHTML = "You Answer Were Correct, One More Point For You"
                 times.value++
                 counter.innerHTML = `Problem Solved : ${times.value}`;
+                check.style.color = 'Green'
             }else {
                 check.innerHTML = "You Answer Were Wrong Sorry"
+                check.style.color = 'red'
             }
         }else {
             display.value = 'Please Insert Numbers'
